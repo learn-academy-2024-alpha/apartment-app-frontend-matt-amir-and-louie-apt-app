@@ -1,0 +1,75 @@
+/* General Styles */
+* {
+  font-family: poppins, sans-serif;
+  font-size: 16pt;
+  margin: 0;
+}
+/* Button */
+.nav-button {
+  border: 2px solid black;
+}
+
+/* Header */
+.nav {
+  justify-content: space-between !important;
+  background-color: white;
+  width: 100% !important;
+  font-weight: 600;
+  font-style: normal;
+  height: 110px;
+  position: sticky;
+  z-index: 1;
+}
+.navlink {
+  background-color: white !important;
+  display: inline-block !important;
+  color: #555555 !important;
+  margin-top: 25px;
+  margin-left: 4px;
+  margin-right: 10px;
+  text-decoration: none !important;
+  font-weight: 800;
+}
+.navlink:hover {
+  transform: scale(1.05);
+}
+.header-navlink-left {
+  background-color: white;
+  display: flex;
+  margin-top: 1rem;
+}
+.header-logo-center {
+  margin: 0;
+  object-fit: cover;
+  height: 75%;
+  width: 75%;
+}
+.header-navlink-right {
+  background-color: white;
+  display: flex;
+  margin-top: 1rem;
+}
+
+/* Footer */
+.footer-bar {
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  position: fixed;
+  height: 80px;
+  justify-content: space-between;
+}
+.footer-text {
+  padding-top: 35px;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 14px !important;
+}
+.footer-logo {
+  justify-content: end;
+  object-fit: scale-down;
+  height: 100px;
+  width: 100px;
+  margin-right: 20px;
+  padding-bottom: 40px;
+}
