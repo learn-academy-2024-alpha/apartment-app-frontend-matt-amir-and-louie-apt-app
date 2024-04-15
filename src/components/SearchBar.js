@@ -3,11 +3,11 @@ import React from "react"
 const SearchBar = ({ keyword, setKeyword }) => {
 	const BarStyling = {
 		width: "15rem",
-		height: "rem",
+		height: "2rem",
 		background: "#F2F1F9",
 		border: "none",
 		padding: "0.5rem",
-		marginTop: "15px",
+		marginTop: "22px",
 		marginBottom: "75px",
 		borderRadius: "25px",
 	}
