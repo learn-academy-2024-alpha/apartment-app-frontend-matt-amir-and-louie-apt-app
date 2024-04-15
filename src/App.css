@@ -35,6 +35,20 @@
 	padding-bottom: 30px;
 }
 
+/* Home */
+.main-carousel-container {
+	display: flex;
+	justify-content: center;
+}
+.image {
+	height: 400px;
+	width: 80vw;
+	object-fit: fill;
+}
+.carousel-inner {
+	height: 400px;
+	/* width: 100%; */
+}
 /* Header */
 .nav {
 	justify-content: space-between !important;
@@ -64,6 +78,7 @@
 	margin-top: 1rem;
 	padding-left: 40px;
 	margin-top: 5px;
+	max-height: 100px;
 }
 .header-logo-center {
 	margin: 0;
@@ -80,6 +95,7 @@
 	margin-top: 1rem;
 	padding-right: 20px;
 	margin-top: 5px;
+	max-height: 100px;
 }
 .sign-in {
 	margin-left: 4px;
