@@ -8,18 +8,18 @@ import mockApartments from "./mockApartments.js"
 import "./App.css"
 
 const App = () => {
-	const [currentUser, setCurrentUser] = useState(mockUsers[0])
-	const [apartments, setApartments] = useState(mockApartments)
+  const [currentUser, setCurrentUser] = useState(mockUsers[0])
+  const [apartments, setApartments] = useState(mockApartments)
 
-	return (
-		<>
-			<Header />
-			<Routes>
-				<Route path="/" element={<Home />} />
-			</Routes>
-			<Footer />
-		</>
-	)
+  return (
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home apartments={mockApartments} />} />
+      </Routes>
+      <Footer />
+    </>
+  )
 }
 
 export default App

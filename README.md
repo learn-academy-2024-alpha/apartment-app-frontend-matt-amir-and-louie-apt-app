@@ -30,3 +30,11 @@ logo added to footer
 added base text
 Font = poppins
 Font color = color: #555555 !important;
+
+### Home page
+
+Carousel
+https://react-bootstrap.netlify.app/docs/components/carousel/
+
+Netflix slider
+https://levelup.gitconnected.com/how-to-implement-netflix-slider-with-react-and-hooks-bdb9b99d1ce4

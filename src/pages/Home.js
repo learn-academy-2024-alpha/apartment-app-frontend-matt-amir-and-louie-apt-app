@@ -1,22 +1,27 @@
 import React from "react"
-import Carousel from "../components/Carousel"
+import apartment5 from "../assets/apartments/apartment5.avif"
+import Slider from "../components/NetflixSlider"
 
-const Home = () => {
-	return (
-		<div>
-			<div className="main-carousel-container">
-				<Carousel />
-			</div>
-			<div className="apartment-slider-container">
-				<div className="apartment1"></div>
-				<div className="apartment2"></div>
-				<div className="apartment3"></div>
-				<div className="apartment4"></div>
-				<div className="apartment5"></div>
-				<div className="apartment6"></div>
-			</div>
-		</div>
-	)
+const Home = ({ apartments }) => {
+  return (
+    <div>
+      <div className="home-img-container">
+        <img
+          className="home-image"
+          src={apartment5}
+          alt="brown apartment buildings"
+        />
+      </div>
+      <Slider>
+        {apartments.map(
+          (apartment) => (
+            <Slider.Item apartment={apartment} key={apartment.id}></Slider.Item>
+          ),
+          console.log(apartments)
+        )}
+      </Slider>
+    </div>
+  )
 }
 
 export default Home
