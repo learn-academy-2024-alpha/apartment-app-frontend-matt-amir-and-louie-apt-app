@@ -1,6 +1,6 @@
 import React from "react"
 import { render, screen } from "@testing-library/react"
-import Logo from "../assets/FlatFinderLogo.png"
+import Logo from "../assets/logos/FlatFinderLogo.png"
 import Header from "../components/Header"
 import { BrowserRouter } from "react-router-dom"
 
@@ -26,6 +26,6 @@ test("Header component", () => {
   const sellLink = screen.getByText("Sell")
   expect(sellLink).toBeInTheDocument()
 
-  const signInLink = screen.getByText("Sign in")
+  const signInLink = screen.getByText("Sign In")
   expect(signInLink).toBeInTheDocument()
 })
