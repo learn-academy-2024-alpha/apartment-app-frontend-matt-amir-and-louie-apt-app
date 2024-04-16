@@ -1,23 +1,20 @@
 import React from "react"
-import { render, screen } from "testing-library/react"
+import { render, screen } from "@testing-library/react"
 import { BrowserRouter } from "react-router-dom"
 import Home from "../pages/Home"
 import apartment from "../assets/apartments/apartment5.avif"
+import mockApartments from "../mockApartments.js"
 
-test("renders home component"),
-  () => {
-    render(
-      <BrowserRouter>
-        <Home />
-      </BrowserRouter>
-    )
+test("renders home component", () => {
+  render(
+    <BrowserRouter>
+      <Home apartments={mockApartments} />
+    </BrowserRouter>
+  )
 
-    const homeImage = screen.getByAltText(
-      "A spanning view of a bridge leading into a city on the water"
-    )
-    expect(homeImage).toBeInTheDocument()
-    expect(homeImage).toHaveAttribute("src", apartment)
+  const searchBar = screen.getByPlaceholderText("search flats")
+  expect(searchBar).toBeInTheDocument()
 
-    // const homeTitleText = screen.getByText(//)
-    // expect(homeTitleText).toBeInTheDocument()
-  }
+  const searchButton = screen.getByRole("button", { name: /search/i })
+  expect(searchButton).toBeInTheDocument()
+})

@@ -1,7 +1,7 @@
 import React from "react"
 import { Nav } from "reactstrap"
 import { NavLink } from "react-router-dom"
-import Logo from "../assets/FlatFinderLogo.png"
+import Logo from "../assets/logos/FlatFinderLogo.png"
 import SearchBar from "./SearchBar"
 
 const Header = () => {
@@ -24,8 +24,9 @@ const Header = () => {
 				</NavLink>
 			</div>
 			<div className="header-navlink-right">
-				<SearchBar />
-				<NavLink className="navlink sign-in">Sign in</NavLink>
+				<NavLink className="navlink">Sign Up</NavLink>
+				<NavLink className="navlink sign-in">Sign In</NavLink>
+				<NavLink className="navlink">Logout</NavLink>
 			</div>
 		</Nav>
 	)

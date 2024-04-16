@@ -4,12 +4,12 @@ import { BrowserRouter } from "react-router-dom"
 import SearchBar from "../components/SearchBar"
 
 test("SearchBar", () => {
-	render(
-		<BrowserRouter>
-			<SearchBar />
-		</BrowserRouter>
-	)
+  render(
+    <BrowserRouter>
+      <SearchBar />
+    </BrowserRouter>
+  )
 
-	const searchBar = screen.getByPlaceholderText("search apartments")
-	expect(searchBar).toBeInTheDocument()
+  const searchBar = screen.getByPlaceholderText("search flats")
+  expect(searchBar).toBeInTheDocument()
 })

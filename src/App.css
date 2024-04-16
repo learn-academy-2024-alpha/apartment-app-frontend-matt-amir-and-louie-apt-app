@@ -40,14 +40,36 @@
 
 /* Home */
 .home-image {
-	height: 400px;
-	width: 80vw;
-	object-fit: fill;
-	padding-bottom: 20px;
-}
-.home-img-container {
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	height: 400px;
+	width: 100vw;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("./assets/city/city2.avif");
+	position: relative;
+}
+.home-text-h2,
+.home-text-h5 {
+	font-weight: 600 !important;
+	color: white;
+	text-shadow: #000000 10px 10px 20px !important;
+	text-align: center;
+	justify-content: center;
+}
+.home-text-h2 {
+	margin-top: 50px;
+	margin: 0;
+	font-size: 3rem;
+	white-space: wrap;
+}
+.home-search-bar-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.home-text-h5 {
+	font-size: 135%;
 }
 
 /* Header */
@@ -68,6 +90,7 @@
 	margin-top: 25px;
 	text-decoration: none !important;
 	font-weight: 800;
+	font-size: 24px;
 	padding-left: 30px;
 }
 .navlink:hover {
@@ -76,8 +99,6 @@
 .header-navlink-left {
 	background-color: white;
 	display: flex;
-	margin-top: 1rem;
-	padding-left: 40px;
 	margin-top: 5px;
 	max-height: 100px;
 }
@@ -93,7 +114,6 @@
 .header-navlink-right {
 	background-color: white;
 	display: flex;
-	margin-top: 1rem;
 	padding-right: 20px;
 	margin-top: 5px;
 	max-height: 100px;
@@ -119,6 +139,7 @@ header {
 	color: white;
 	text-align: center;
 	width: 100%;
+	z-index: 1;
 }
 .not-found-h2,
 .not-found-h3 {
@@ -152,25 +173,7 @@ header {
 	transform: scale(1.05);
 }
 
-/* Slider */
-/* .slider-container {
-  display: flex;
-  padding: 0 55px;
-  height: 200px;
+/* Search Bar */
+.search-button:hover {
+	transform: scale(1.05);
 }
-.slider-container:hover .slide-item {
-  transform: translateX(-25%);
-}
-.slide-item {
-  background: green;
-  flex: 0 0 19.7%;
-  text-align: center;
-  margin: 0 2px;
-  transition: transform 300ms ease 100ms;
-}
-.slide-item:hover {
-  transform: scale(1.5) !important;
-}
-.slide-item:hover ~ .slide-item {
-  transform: translateX(25%);
-} */
