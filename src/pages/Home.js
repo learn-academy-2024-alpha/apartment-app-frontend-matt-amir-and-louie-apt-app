@@ -9,12 +9,12 @@ const Home = ({ apartments }) => {
 				<div className="home-image">
 					<div className="home-image-text">
 						<h2 className="home-text-h2">Find Your New Flat</h2>
-						<h3 className="home-text-h3">
+						<h5 className="home-text-h5">
 							Rent, Buy, Sell in just a few clicks
-							<div className="home-search-bar-container">
-								<SearchBar />
-							</div>
-						</h3>
+						</h5>
+						<div className="home-search-bar-container">
+							<SearchBar />
+						</div>
 					</div>
 				</div>
 			</div>

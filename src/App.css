@@ -50,7 +50,7 @@
 	position: relative;
 }
 .home-text-h2,
-.home-text-h3 {
+.home-text-h5 {
 	font-weight: 600 !important;
 	color: white;
 	text-shadow: #000000 10px 10px 20px !important;
@@ -63,13 +63,13 @@
 	font-size: 3rem;
 	white-space: wrap;
 }
-.home-text-h3 {
-	font-size: 2rem;
-}
 .home-search-bar-container {
 	width: 100%;
 	display: flex;
 	justify-content: center;
+}
+.home-text-h5 {
+	font-size: 135%;
 }
 
 /* Header */
