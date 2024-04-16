@@ -56,25 +56,25 @@
 
 .content-title {
 	font-size: 45px;
-	color: #fff;
+	color: #555555;
 	font-weight: 700;
 }
 
 .content-description {
 	font-size: 18px;
-	color: #999;
+	color: #555555;
 	margin-top: 20px;
 	max-width: 500px;
 }
 
 .content-close {
-	color: #fff;
+	color: #555555;
 	width: 40px;
 	height: 40px;
 	background: transparent;
 	outline: none;
 	border: none;
 	position: absolute;
-	top: 30px;
+	top: 35px;
 	right: 30px;
 }

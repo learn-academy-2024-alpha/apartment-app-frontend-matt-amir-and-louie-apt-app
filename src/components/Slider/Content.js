@@ -15,10 +15,16 @@ const Content = ({ apartment, onClose }) => (
 			<div className="content-area-container">
 				<div className="content-title">{apartment.street}</div>
 				<div className="content-description">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-					et euismod ligula. Morbi mattis pretium eros, ut mollis leo tempus
-					eget. Sed in dui ac ipsum feugiat ultricies. Phasellus vestibulum enim
-					quis quam congue, non fringilla orci placerat. Praesent sollicitudin
+					<h4>
+						{apartment.street},{apartment.unit},{apartment.city},
+						{apartment.state}
+					</h4>
+					<h4>{apartment.square_footage}</h4>
+					<h4>{apartment.price}</h4>
+					<h4>{apartment.bedrooms}</h4>
+					<h4>{apartment.bathrooms}</h4>
+					<h4>{apartment.pets}</h4>
+					<h4>{apartment.pets}</h4>
 				</div>
 			</div>
 			<button className="content-close" onClick={onClose}>
