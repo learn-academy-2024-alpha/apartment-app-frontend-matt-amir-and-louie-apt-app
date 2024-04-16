@@ -9,23 +9,17 @@
 	padding: 0;
 	margin: 40px 0;
 	z-index: 4;
+	right: 0;
 
 	span {
 		width: 25px;
 		color: #fff;
 		display: block;
 		margin: 0 auto;
+		transform: rotateZ(-90deg);
 	}
 
-	.slide-button-next {
-		right: 0;
-
-		span {
-			transform: rotateZ(-90deg);
-		}
-	}
-
-	.slide-button-prev {
+	.slide-button {
 		left: 0;
 
 		span {
