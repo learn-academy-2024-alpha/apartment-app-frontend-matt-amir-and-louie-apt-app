@@ -10,6 +10,6 @@ test("SearchBar", () => {
 		</BrowserRouter>
 	)
 
-	const searchBar = screen.getByPlaceholderText("search apartments")
+	const searchBar = screen.getByPlaceholderText("search flat")
 	expect(searchBar).toBeInTheDocument()
 })
