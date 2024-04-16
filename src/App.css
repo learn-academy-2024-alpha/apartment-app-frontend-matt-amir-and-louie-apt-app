@@ -100,6 +100,38 @@
   margin-right: 10px;
 }
 
+/* NotFound */
+
+.not-found-text-container {
+text-align: center;
+height: 0px;
+z-index: 1 !important;
+position: sticky;
+}
+
+.not-found-text {
+font-weight: 800 !important;
+color: #0E82CC !important;
+text-shadow: #000000 10px 10px 20px rgba(0, 0, 0, 0.5) !important;
+
+}
+
+.not-found-image-container {
+display: flex;
+justify-content: center;
+z-index: 0 ;
+
+
+.not-found-image {
+width: 900;
+height: 900;
+background: linear-gradient
+(rgba (0, 0, 0, 0.5)
+rgba (0, 0, 0, 0.5));
+}
+}
+
+
 /* Slider */
 /* .slider-container {
   display: flex;
