@@ -3,11 +3,11 @@ import IconArrowDown from "./../Icons/IconArrowDown"
 import "./ShowDetailsButton.css"
 
 const ShowDetailsButton = ({ onClick }) => (
-  <button onClick={onClick} className="show-details-button">
-    <span>
-      <IconArrowDown />
-    </span>
-  </button>
+	<button onClick={onClick} className="show-details-button">
+		<span className="show-details-span">
+			<IconArrowDown />
+		</span>
+	</button>
 )
 
 export default ShowDetailsButton
