@@ -2,7 +2,6 @@ import React from "react"
 import { Nav } from "reactstrap"
 import { NavLink } from "react-router-dom"
 import Logo from "../assets/logos/FlatFinderLogo.png"
-import SearchBar from "./SearchBar"
 
 const Header = () => {
 	return (
@@ -11,8 +10,8 @@ const Header = () => {
 				<NavLink className="navlink" to="./index">
 					Rent
 				</NavLink>
-				<NavLink className="navlink">Buy</NavLink>
-				<NavLink className="navlink">Sell</NavLink>
+				<NavLink className="navlink">List</NavLink>
+				<NavLink className="navlink">Manage</NavLink>
 			</div>
 			<div className="logo-container">
 				<NavLink to="/">
