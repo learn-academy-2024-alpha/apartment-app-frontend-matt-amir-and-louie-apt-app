@@ -4,10 +4,10 @@ import NavButton from "../components/NavButton"
 const Index = ({ apartments }) => {
   return (
     <div className="center-content">
-      <h3 className="title-header">Apartment Listings</h3>
+      <h3 className="title-header">Flat Listings</h3>
       <div className="index-cards-set">
         {apartments.map((apartment) => {
-          console.log(apartment)
+          // console.log(apartment)
           return (
             <div key={apartment.id} className="card">
               <div className="index-profile-image">
