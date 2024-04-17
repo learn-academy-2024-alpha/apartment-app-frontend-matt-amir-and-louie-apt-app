@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom"
 import Header from "./components/Header.js"
 import Footer from "./components/Footer.js"
 import Home from "./pages/Home"
+import Index from "./pages/Index.js"
+import Show from "./pages/Show.js"
 import mockUsers from "./mockUsers.js"
 import mockApartments from "./mockApartments.js"
 import "./App.css"
@@ -16,8 +18,10 @@ const App = () => {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Home apartments={mockApartments} />} />
+        <Route path="/" element={<Home apartments={apartments} />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/index" element={<Index apartments={apartments} />} />
+        <Route path="/show/:id" element={<Show apartments={apartments} />} />
       </Routes>
       <Footer />
     </>
