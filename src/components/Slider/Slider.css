@@ -12,7 +12,7 @@
 	height: 200px;
 }
 .slider-container:not(.slider-open) .item:hover .show-details-button {
-	opacity: 0.8;
+	opacity: 0.9;
 }
 
 .slider-container:not(.slider-open) .item:hover {
