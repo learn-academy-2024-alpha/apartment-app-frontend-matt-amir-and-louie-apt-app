@@ -5,7 +5,6 @@ import Footer from "./components/Footer.js"
 import Home from "./pages/Home"
 import Index from "./pages/Index.js"
 import Show from "./pages/Show.js"
-import mockUsers from "./mockUsers.js"
 import mockApartments from "./mockApartments.js"
 import "./App.css"
 import NotFound from "./pages/NotFound.js"
@@ -13,8 +12,9 @@ import SignIn from "./pages/SignIn.js"
 import SignUp from "./pages/SignUp.js"
 
 const App = () => {
-  const [currentUser, setCurrentUser] = useState(mockUsers[0])
+  const [user, setUser] = useState(null)
   const [apartments, setApartments] = useState(mockApartments)
+  console.log(user)
 
   const signIn = async (user) => {
     try {
