@@ -7,7 +7,7 @@ const Header = () => {
 	return (
 		<Nav className="me-auto">
 			<div className="header-navlink-left">
-				<NavLink className="navlink" to="./index">
+				<NavLink className="navlink" to="/index">
 					Rent
 				</NavLink>
 				<NavLink className="navlink">List</NavLink>
