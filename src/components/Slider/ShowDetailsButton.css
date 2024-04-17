@@ -9,10 +9,10 @@
 	border: 0;
 	outline: none;
 	width: 100%;
-
 	span {
 		display: block;
-		width: 12px;
+		width: 50px;
+		height: 160px;
 		margin: 0 auto;
 		color: white;
 	}

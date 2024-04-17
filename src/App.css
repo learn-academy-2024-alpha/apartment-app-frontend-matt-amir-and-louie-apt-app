@@ -4,11 +4,34 @@
 	font-size: 16pt;
 	margin: 0;
 }
+.center-content {
+	text-align: center;
+}
+.title-header {
+	padding: 0.5rem;
+}
+.page-height {
+	height: 80vh;
+}
+.blank-page-height {
+	height: 60vh;
+}
 
 /* Button */
 .nav-button {
-	border: 2px solid black;
 	text-align: center;
+	border-radius: 10px;
+	background-color: #0582cc;
+	border: hidden;
+	color: #e4b539;
+	text-shadow: #000000 10px 10px 20px;
+	height: 45px;
+	font-weight: 800;
+	margin-left: 10px;
+	margin-top: 20px;
+}
+.nav-button:hover {
+	transform: scale(1.05);
 }
 
 /* Footer */
@@ -16,7 +39,6 @@
 	bottom: 0;
 	display: flex;
 	width: 100%;
-	position: fixed;
 	height: 80px;
 	justify-content: space-between;
 	background-color: white;
@@ -84,7 +106,7 @@
 	z-index: 1;
 }
 .navlink {
-	background-color: white !important;
+	background-color: hidden !important;
 	display: inline-block !important;
 	color: #555555 !important;
 	margin-top: 25px;
@@ -109,7 +131,7 @@
 	width: 80%;
 }
 .logo-container {
-	margin-left: 190px;
+	margin-left: 150px;
 }
 .header-navlink-right {
 	background-color: white;
@@ -121,6 +143,52 @@
 .sign-in {
 	margin-left: 4px;
 	margin-right: 10px;
+}
+
+/* Index */
+.card {
+	/* box-shadow: 1px 1px #696049; */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+	padding-bottom: 0.5rem;
+	width: 18rem;
+}
+.card:hover {
+	transform: scale(1.05);
+	border: 2px outset #0582cc !important;
+}
+.button-div {
+	display: flex;
+	justify-content: center;
+}
+h6 {
+	color: #555555 !important;
+	font-weight: 700 !important;
+	text-align: center;
+}
+.index-cards-set {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.index-profile-image {
+	display: flex;
+	justify-content: center;
+	max-height: 250px;
+	overflow: hidden;
+	font-weight: 500;
+}
+.index-apartment-image {
+	width: 18rem;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.title-header {
+	font-weight: 800;
+	color: #555555 !important;
+	text-align: center;
 }
 
 /* NotFound */
@@ -176,4 +244,44 @@ header {
 /* Search Bar */
 .search-button:hover {
 	transform: scale(1.05);
+}
+
+/* ---SHOW--- */
+.show-apartment {
+	display: flex;
+}
+.show-apartment-image {
+	width: 50vw;
+}
+.apartment-details {
+	margin: 2rem;
+}
+.apartment-text-h5 {
+	font-weight: 700 !important;
+	color: #555555 !important;
+}
+.apartment-text-p {
+	font-weight: 500;
+	color: #555555 !important;
+}
+.icon {
+	padding: 0 10px;
+}
+@media (max-width: 900px) {
+	.auth-form {
+		width: 80vw;
+		margin: 0 auto;
+	}
+}
+@media (max-width: 650px) {
+	.auth-form {
+		width: 95vw;
+		margin: 0 auto;
+	}
+	.show-apartment-image {
+		width: 100%;
+	}
+	.show-apartment {
+		display: block;
+	}
 }
