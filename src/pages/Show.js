@@ -1,16 +1,10 @@
 import NavButton from "../components/NavButton"
 import { useParams, useNavigate } from "react-router-dom"
 
-const Show = ({ apartments, deleteApartment, user }) => {
+const Show = ({ apartments, user }) => {
 	const navigate = useNavigate()
 	const { id } = useParams()
-	console.log("apartments:", apartments)
 	const apartment = apartments.find((item) => item.id === +id)
-	console.log("apartment:", apartment)
-	// const handleDeleteApartment = () => {
-	//   deleteApartment(apartment.id)
-	//   navigate("/apartments")
-	// }
 	return (
 		<>
 			<h3 className="title-header center-content">Apartment Details</h3>
@@ -45,11 +39,6 @@ const Show = ({ apartments, deleteApartment, user }) => {
 						buttonContent="Edit Apartment"
 					/>
 				)}
-				{/* {user && (
-          <button className="nav-button" onClick={handleDeleteApartment}>
-            Delete Apartment
-          </button>
-        )} */}
 				<NavButton url="/apartments" buttonContent="Back to All Apartments" />
 			</div>
 		</>
