@@ -8,7 +8,7 @@ const Header = () => {
 	return (
 		<Nav className="me-auto">
 			<div className="header-navlink-left">
-				<NavLink className="navlink" href="/components/">
+				<NavLink className="navlink" to="./index">
 					Rent
 				</NavLink>
 				<NavLink className="navlink">Buy</NavLink>
