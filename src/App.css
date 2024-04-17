@@ -106,7 +106,7 @@
 	z-index: 1;
 }
 .navlink {
-	background-color: white !important;
+	background-color: hidden !important;
 	display: inline-block !important;
 	color: #555555 !important;
 	margin-top: 25px;
@@ -131,7 +131,7 @@
 	width: 80%;
 }
 .logo-container {
-	margin-left: 190px;
+	margin-left: 150px;
 }
 .header-navlink-right {
 	background-color: white;
