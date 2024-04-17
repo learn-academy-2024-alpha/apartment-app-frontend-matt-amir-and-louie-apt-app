@@ -28,7 +28,7 @@ const SearchBar = ({ keyword, setKeyword }) => {
 				style={BarStyling}
 				key="random1"
 				value={keyword}
-				placeholder={"search flats"}
+				placeholder={"London, UK"}
 				onChange={(e) => setKeyword(e.target.value)}
 			/>
 			<button className="search-button" style={ButtonStyling}>
