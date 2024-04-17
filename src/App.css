@@ -144,6 +144,7 @@
 	margin-left: 4px;
 	margin-right: 10px;
 }
+
 /* Index */
 .card {
 	/* box-shadow: 1px 1px #696049; */
@@ -162,7 +163,6 @@
 	display: flex;
 	justify-content: center;
 }
-
 h6 {
 	color: #555555 !important;
 	font-weight: 700 !important;
@@ -240,6 +240,7 @@ header {
 .not-found-button:hover {
 	transform: scale(1.05);
 }
+
 /* Search Bar */
 .search-button:hover {
 	transform: scale(1.05);
@@ -266,14 +267,12 @@ header {
 .icon {
 	padding: 0 10px;
 }
-
 @media (max-width: 900px) {
 	.auth-form {
 		width: 80vw;
 		margin: 0 auto;
 	}
 }
-
 @media (max-width: 650px) {
 	.auth-form {
 		width: 95vw;
