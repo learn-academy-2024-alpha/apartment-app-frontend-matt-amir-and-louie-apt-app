@@ -8,7 +8,7 @@ const Content = ({ apartment, onClose }) => (
 			<div className="content-background-shadow" />
 			<div
 				className="content-background-image"
-				style={{ "background-image": `url(${apartment.image})` }}
+				style={{ backgroundImage: `url(${apartment.image})` }}
 			/>
 		</div>
 		<div className="content-area">
