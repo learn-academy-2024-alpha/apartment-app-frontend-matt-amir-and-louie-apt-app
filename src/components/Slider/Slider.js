@@ -13,7 +13,6 @@ const Slider = ({ children, apartment }) => {
 	const [currentSlide, setCurrentSlide] = useState(apartment)
 	// state to handle our useSizeElement
 	const { width, elementRef } = useSizeElement()
-	//
 	const { handlePrev, handleNext, slideProps, containerRef, hasNext, hasPrev } =
 		useSliding(width, React.Children.count(children))
 	// handles the selecting of a slide
