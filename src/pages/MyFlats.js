@@ -44,14 +44,17 @@ const MyFlats = ({ apartments, user, deleteApartment }) => {
 							</div>
 							<div>
 								<div>
-									<span className="icon">
-										<ImLocation2 />
-									</span>
 									<h6>
+										<span className="icon">
+											<ImLocation2 />
+										</span>
 										{apartment.unit}, {apartment.street}
 									</h6>
 								</div>
 								<h6>
+									<span className="icon icon-hidden">
+										<ImLocation2 />
+									</span>
 									{apartment.city}, {apartment.state}
 								</h6>
 								<h6>
@@ -64,7 +67,7 @@ const MyFlats = ({ apartments, user, deleteApartment }) => {
 									<span className="icon">
 										<FaHouse />
 									</span>
-									{apartment.square_footage} square feet
+									{apartment.square_footage} sq.ft.
 								</h6>
 								<h6>
 									<span className="icon">
