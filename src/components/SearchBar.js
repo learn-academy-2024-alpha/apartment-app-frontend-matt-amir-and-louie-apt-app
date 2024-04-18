@@ -1,4 +1,5 @@
 import React from "react"
+import { NavLink } from "react-router-dom"
 
 const SearchBar = ({ keyword, setKeyword }) => {
 	const BarStyling = {
@@ -31,9 +32,9 @@ const SearchBar = ({ keyword, setKeyword }) => {
 				placeholder={"London, UK"}
 				onChange={(e) => setKeyword(e.target.value)}
 			/>
-			<button className="search-button" style={ButtonStyling}>
+			<a className="search-button btn" style={ButtonStyling} href="/index">
 				Search
-			</button>
+			</a>
 		</>
 	)
 }
