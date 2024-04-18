@@ -14,6 +14,7 @@ import MyFlats from "./pages/MyFlats.js"
 import "./App.css"
 
 const App = () => {
+
 	const [user, setUser] = useState(null)
 	const [apartments, setApartments] = useState([])
 	useEffect(() => {
@@ -21,8 +22,7 @@ const App = () => {
 		if (checkForLoggedInUser) setUser(JSON.parse(checkForLoggedInUser))
 		getApartments()
 	}, [])
-
-	console.log(apartments)
+  
 	const signIn = async (user) => {
 		try {
 			const signInResponse = await fetch("http://localhost:3000/login", {
@@ -45,27 +45,29 @@ const App = () => {
 		}
 	}
 
-	const signUp = async (user) => {
-		try {
-			const signUpResponse = await fetch("http://localhost:3000/signup", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-					Accept: "application/json",
-				},
-				body: JSON.stringify(user),
-			})
-			if (!signUpResponse) {
-				throw new Error(signUpResponse.errors)
-			}
-			const payload = await signUpResponse.json()
-			localStorage.setItem("token", signUpResponse.headers.get("Authorization"))
-			localStorage.setItem("user", JSON.stringify(payload))
-			setUser(payload)
-		} catch (error) {
-			console.error("Error fetching user sign up request")
-		}
-	}
+
+  const signUp = async (user) => {
+    try {
+      const signUpResponse = await fetch("http://localhost:3000/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(user),
+      })
+      if (!signUpResponse) {
+        throw new Error(signUpResponse.errors)
+      }
+      const payload = await signUpResponse.json()
+      localStorage.setItem("token", signUpResponse.headers.get("Authorization"))
+      localStorage.setItem("user", JSON.stringify(payload))
+      setUser(payload)
+    } catch (error) {
+      console.error("Error fetching user sign up request")
+    }
+  }
+
 
 	const logOut = async () => {
 		try {
