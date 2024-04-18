@@ -26,7 +26,7 @@ const ApartmentNew = ({ createApartment, user }) => {
 	const onSubmit = (newApartment) => {
 		newApartment.user_id = user.id
 		createApartment(newApartment)
-		navigate("/my-apartments")
+		navigate("/myFlats")
 	}
 
 	return (

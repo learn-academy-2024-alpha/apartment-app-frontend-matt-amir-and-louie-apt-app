@@ -13,7 +13,7 @@ const MyFlats = ({ apartments, user, deleteApartment }) => {
 	const handleDeleteApartment = (id) => {
 		alert("Are you sure you want to delete this apartment?")
 		deleteApartment(id)
-		navigate("/my-apartments")
+		navigate("/myFlats")
 	}
 	return (
 		<div className="page-body center-content">
@@ -30,7 +30,7 @@ const MyFlats = ({ apartments, user, deleteApartment }) => {
 					<h5>You don't have any Flats listed.</h5>
 				</div>
 			)}
-			<NavButton url="/new" buttonContent="add an apartment" />
+			<NavButton url="/new" buttonContent="add a Flat" />
 			<div className="index-cards-set">
 				{myApartments?.map((apartment) => {
 					return (
