@@ -16,6 +16,15 @@
 .blank-page-height {
 	height: 60vh;
 }
+.icon {
+	padding: 0 10px;
+}
+.icon-pound {
+	font-size: xxx-large !important;
+}
+.icon-hidden {
+	visibility: hidden;
+}
 
 /* Button */
 .nav-button {
@@ -29,10 +38,15 @@
 	font-weight: 800;
 	margin-left: 10px;
 	margin-top: 20px;
-	z-index: 1;
+	z-index: 6;
 }
 .nav-button:hover {
 	transform: scale(1.05);
+}
+.nav-button:active {
+	background-color: #03639b;
+	box-shadow: 0 3px #666;
+	transform: translateY(4px);
 }
 
 /* Footer */
@@ -59,6 +73,22 @@
 	width: 100px;
 	margin-right: 20px;
 	padding-bottom: 30px;
+}
+.footer-logo:active {
+	transform: translateY(4px);
+}
+
+/* Form */
+.auth-form {
+	width: 50vw;
+	margin: 0 auto;
+}
+.form-size {
+	width: 90vw;
+	margin: 0 auto;
+}
+.form-validations {
+	color: red;
 }
 
 /* Home */
@@ -120,6 +150,9 @@
 .navlink:hover {
 	transform: scale(1.05);
 }
+.navlink:active {
+	transform: translateY(4px);
+}
 .header-navlink-left {
 	background-color: white;
 	display: flex;
@@ -130,7 +163,9 @@
 	margin: 0;
 	object-fit: scale-down;
 	height: 100%;
-	/* width: 100%; */
+}
+.header-logo-center:active {
+	transform: translateY(4px);
 }
 .logo-container {
 	position: absolute;
@@ -139,6 +174,7 @@
 	top: 0;
 	bottom: 0;
 	margin-left: 650px;
+	width: 100px;
 }
 .header-navlink-right {
 	background-color: white;
@@ -248,10 +284,18 @@ header {
 .not-found-button:hover {
 	transform: scale(1.05);
 }
+.not-found-button:active {
+	transform: translateY(4px);
+}
 
 /* Search Bar */
 .search-button:hover {
 	transform: scale(1.05);
+}
+.search-button:active {
+	background-color: #03639b !important;
+	box-shadow: 0 3px #666;
+	transform: translateY(4px);
 }
 
 /* ---SHOW--- */
@@ -264,7 +308,7 @@ header {
 .apartment-details {
 	margin: 2rem;
 }
-.apartment-text-h5 {
+.apartment-text-h4 {
 	font-weight: 700 !important;
 	color: #555555 !important;
 }
