@@ -1,32 +1,10 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import IconArrowDown from "./../Icons/IconArrowDown"
-import "./SlideButtonRight.css"
-import "./SlideButtonLeft.css"
-import classNames from "classnames"
+import "./SlideButton.css"
 
-const SlideButton = ({ onClick }) => {
-	const [isClicked, setIsClicked] = useState(false)
-
-	// useEffect(() => {
-	// 	const checkForClick = localStorage.getItem("isClicked")
-	// 	if (checkForClick) setIsClicked(JSON.parse(checkForClick))
-	// }, [])
-
-	const handleToggle = () => {
-		setIsClicked(!isClicked)
-	}
-	const conditionalStyles = classNames("SlideButton", {
-		"slide-button-left": isClicked,
-		"slide-button-right": !isClicked,
-	})
+const SlideButton = ({ onClick, type }) => {
 	return (
-		<button
-			className={conditionalStyles}
-			onClick={() => {
-				handleToggle()
-				onClick()
-			}}
-		>
+		<button className={`slide-button slide-button-${type}`} onClick={onClick}>
 			<span>
 				<IconArrowDown />
 			</span>
