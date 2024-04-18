@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom"
 const SignIn = ({ signIn }) => {
 	const navigate = useNavigate()
 	const preloadedValues = {
-		email: "person@yahoo.com",
-		password: "personpassword",
+		email: "test2@example.com",
+		password: "password",
 	}
 	const {
 		register,
