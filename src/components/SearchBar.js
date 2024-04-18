@@ -32,9 +32,11 @@ const SearchBar = ({ keyword, setKeyword }) => {
         placeholder={"London, UK"}
         onChange={(e) => setKeyword(e.target.value)}
       />
-      <a className="search-button btn" style={ButtonStyling} to="/index">
-        Search
-      </a>
+      <button className="search-button" style={ButtonStyling}>
+        <NavLink to="/index" className="search-button-content">
+          Search
+        </NavLink>
+      </button>
     </>
   )
 }
