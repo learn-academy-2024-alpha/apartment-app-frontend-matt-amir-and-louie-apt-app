@@ -30,7 +30,7 @@ const MyFlats = ({ apartments, user, deleteApartment }) => {
 					<h5>You don't have any Flats listed.</h5>
 				</div>
 			)}
-			<NavButton url="/apartment-new" buttonContent="add an apartment" />
+			<NavButton url="/new" buttonContent="add an apartment" />
 			<div className="index-cards-set">
 				{myApartments?.map((apartment) => {
 					return (

@@ -5,21 +5,24 @@ import Footer from "./components/Footer.js"
 import Home from "./pages/Home"
 import Index from "./pages/Index.js"
 import Show from "./pages/Show.js"
-import mockApartments from "./mockApartments.js"
-import "./App.css"
+import New from "./pages/New.js"
+import Edit from "./pages/Edit.js"
 import NotFound from "./pages/NotFound.js"
 import SignIn from "./pages/SignIn.js"
 import SignUp from "./pages/SignUp.js"
 import MyFlats from "./pages/MyFlats.js"
+import "./App.css"
 
 const App = () => {
 	const [user, setUser] = useState(null)
-	const [apartments, setApartments] = useState(mockApartments)
+	const [apartments, setApartments] = useState([])
 	useEffect(() => {
 		const checkForLoggedInUser = localStorage.getItem("user")
 		if (checkForLoggedInUser) setUser(JSON.parse(checkForLoggedInUser))
+		getApartments()
 	}, [])
 
+	console.log(apartments)
 	const signIn = async (user) => {
 		try {
 			const signInResponse = await fetch("http://localhost:3000/login", {
@@ -84,8 +87,73 @@ const App = () => {
 			console.error("Error fetching user sign out request")
 		}
 	}
+
+	const getApartments = async () => {
+		try {
+			const getResponse = await fetch("http://localhost:3000/apartments")
+			if (!getResponse.ok) {
+				throw new Error("Error on the get request for apartments")
+			}
+			const getResult = await getResponse.json()
+			setApartments(getResult)
+		} catch (error) {
+			alert("Opps something went wrong", error.message)
+		}
+	}
+	const createApartment = async (newApartment) => {
+		try {
+			const postResponse = await fetch("http://localhost:3000/apartments", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(newApartment),
+			})
+			if (!postResponse.ok) {
+				throw new Error("Error on the post request for Apartments")
+			}
+			await postResponse.json()
+			getApartments()
+		} catch (error) {
+			alert("Opps something went wrong", error.message)
+		}
+	}
+	const updateApartment = async (editApartment, id) => {
+		console.log("editApartment:", editApartment)
+		console.log("id:", id)
+		try {
+			const patchResponse = await fetch(
+				`http://localhost:3000/apartments/${id}`,
+				{
+					method: "PATCH",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify(editApartment),
+				}
+			)
+			if (!patchResponse.ok) {
+				throw new Error("Error on the patch request for apartments")
+			}
+			await patchResponse.json()
+			getApartments()
+		} catch (error) {
+			alert("Opps something went wrong", error.message)
+		}
+	}
+
 	const deleteApartment = async (id) => {
-		console.log(id)
+		try {
+			const response = await fetch(`http://localhost:3000/apartment/${id}`, {
+				method: "DELETE",
+			})
+			if (!response.ok) {
+				throw new Error("Error on the delete request")
+			}
+			getApartments()
+		} catch (error) {
+			alert("Opps something went wrong", error.message)
+		}
 	}
 
 	return (
@@ -93,7 +161,6 @@ const App = () => {
 			<Header user={user} logOut={logOut} />
 			<Routes>
 				<Route path="/" element={<Home apartments={apartments} />} />
-				<Route path="*" element={<NotFound />} />
 				<Route path="/index" element={<Index apartments={apartments} />} />
 				<Route
 					path="/apartment/:id"
@@ -111,7 +178,24 @@ const App = () => {
 						}
 					/>
 				)}
-				<Route path="/myFlats" element={<MyFlats />} />
+				{user && (
+					<Route
+						path="/new"
+						element={<New createApartment={createApartment} user={user} />}
+					/>
+				)}
+				{user && (
+					<Route
+						path="/apartment-edit/:id"
+						element={
+							<Edit
+								apartments={apartments}
+								updateApartment={updateApartment}
+								user={user}
+							/>
+						}
+					/>
+				)}
 				<Route path="/signin" element={<SignIn signIn={signIn} />} />
 				<Route path="/signup" element={<SignUp signUp={signUp} />} />
 				<Route path="*" element={<NotFound />} />

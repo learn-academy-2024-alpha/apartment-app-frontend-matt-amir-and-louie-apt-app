@@ -18,11 +18,13 @@ const Home = ({ apartments }) => {
 					</div>
 				</div>
 			</div>
-			<Slider apartments={apartments}>
-				{apartments.map((apartment) => (
-					<Slider.Item apartment={apartment} key={apartment.id}></Slider.Item>
-				))}
-			</Slider>
+			{apartments.length > 0 && (
+				<Slider apartments={apartments}>
+					{apartments.map((apartment) => (
+						<Slider.Item apartment={apartment} key={apartment.id}></Slider.Item>
+					))}
+				</Slider>
+			)}
 		</div>
 	)
 }

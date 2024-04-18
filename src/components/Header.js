@@ -15,10 +15,18 @@ const Header = ({ logOut, user }) => {
 		<Nav className="me-auto">
 			<div className="header-navlink-left">
 				<NavLink className="navlink" to="/index">
-					Rent
+					Rent Flat
 				</NavLink>
-				<NavLink className="navlink">List</NavLink>
-				<NavLink className="navlink">Manage</NavLink>
+				{!user && (
+					<NavLink to="/signup" className="navlink">
+						Create Listing
+					</NavLink>
+				)}
+				{user && (
+					<NavLink className="navlink" to="/new">
+						Create A Listing
+					</NavLink>
+				)}
 			</div>
 			<div className="logo-container">
 				<NavLink to="/">
@@ -32,7 +40,7 @@ const Header = ({ logOut, user }) => {
 			<div className="header-navlink-right">
 				{user && (
 					<NavLink to="/MyFlats" className="navlink">
-						My Flats
+						Manage Flats
 					</NavLink>
 				)}
 				{!user && (
