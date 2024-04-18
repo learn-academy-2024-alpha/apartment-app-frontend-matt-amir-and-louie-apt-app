@@ -2,8 +2,9 @@ import React from "react"
 import { Nav } from "reactstrap"
 import { NavLink, useNavigate } from "react-router-dom"
 import Logo from "../assets/logos/FlatFinderLogo.png"
+import NavButton from "./NavButton"
 
-const Header = ({ logOut }) => {
+const Header = ({ logOut, user }) => {
 	const navigate = useNavigate()
 
 	const handleLogOut = () => {
@@ -29,15 +30,22 @@ const Header = ({ logOut }) => {
 				</NavLink>
 			</div>
 			<div className="header-navlink-right">
-				<NavLink className="navlink" to="/signup">
-					Sign Up
-				</NavLink>
-				<NavLink className="navlink" to="/signin">
-					Sign In
-				</NavLink>
-				<NavLink className="navlink" to="/" onClick={handleLogOut}>
-					Logout
-				</NavLink>
+				{user && (
+					<NavLink to="/MyFlats" className="navlink">
+						My Flats
+					</NavLink>
+				)}
+				{!user && (
+					<NavLink to="/signin" className="navlink">
+						Sign In
+					</NavLink>
+				)}
+				{!user && <NavButton url="/signup" buttonContent="Sign Up" />}
+				{user && (
+					<button className="nav-button" onClick={handleLogOut}>
+						Log Out
+					</button>
+				)}
 			</div>
 		</Nav>
 	)

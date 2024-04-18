@@ -29,6 +29,7 @@
 	font-weight: 800;
 	margin-left: 10px;
 	margin-top: 20px;
+	z-index: 1;
 }
 .nav-button:hover {
 	transform: scale(1.05);
@@ -114,6 +115,7 @@
 	font-weight: 800;
 	font-size: 24px;
 	padding-left: 30px;
+	z-index: 1;
 }
 .navlink:hover {
 	transform: scale(1.05);
@@ -127,11 +129,16 @@
 .header-logo-center {
 	margin: 0;
 	object-fit: scale-down;
-	height: 80%;
-	width: 80%;
+	height: 100%;
+	/* width: 100%; */
 }
 .logo-container {
-	margin-left: 150px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin-left: 650px;
 }
 .header-navlink-right {
 	background-color: white;
@@ -172,6 +179,7 @@ h6 {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
+	margin-top: 20px;
 }
 .index-profile-image {
 	display: flex;

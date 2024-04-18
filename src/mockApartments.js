@@ -87,6 +87,7 @@ let mockApartments = [
 		pets: "small pets okay",
 		image:
 			"https://images.unsplash.com/photo-1576378839886-48817ce9c383?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		user_id: 2,
 	},
 ]
 export default mockApartments

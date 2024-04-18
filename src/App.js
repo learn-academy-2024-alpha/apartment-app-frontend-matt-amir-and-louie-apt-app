@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Routes, Route } from "react-router-dom"
 import Header from "./components/Header.js"
 import Footer from "./components/Footer.js"
@@ -10,11 +10,16 @@ import "./App.css"
 import NotFound from "./pages/NotFound.js"
 import SignIn from "./pages/SignIn.js"
 import SignUp from "./pages/SignUp.js"
+import MyFlats from "./pages/MyFlats.js"
 
 const App = () => {
 	const [user, setUser] = useState(null)
 	const [apartments, setApartments] = useState(mockApartments)
 	console.log(user)
+	useEffect(() => {
+		const checkForLoggedInUser = localStorage.getItem("user")
+		if (checkForLoggedInUser) setUser(JSON.parse(checkForLoggedInUser))
+	}, [])
 
 	const signIn = async (user) => {
 		try {
@@ -80,10 +85,13 @@ const App = () => {
 			console.error("Error fetching user sign out request")
 		}
 	}
+	const deleteApartment = async (id) => {
+		console.log(id)
+	}
 
 	return (
 		<>
-			<Header logOut={logOut} />
+			<Header user={user} logOut={logOut} />
 			<Routes>
 				<Route path="/" element={<Home apartments={apartments} />} />
 				<Route path="*" element={<NotFound />} />
@@ -92,6 +100,19 @@ const App = () => {
 					path="/apartment/:id"
 					element={<Show apartments={apartments} />}
 				/>
+				{user && (
+					<Route
+						path="/myFlats"
+						element={
+							<MyFlats
+								apartments={apartments}
+								user={user}
+								deleteApartment={deleteApartment}
+							/>
+						}
+					/>
+				)}
+				<Route path="/myFlats" element={<MyFlats />} />
 				<Route path="/signin" element={<SignIn signIn={signIn} />} />
 				<Route path="/signup" element={<SignUp signUp={signUp} />} />
 				<Route path="*" element={<NotFound />} />
