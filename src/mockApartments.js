@@ -39,7 +39,7 @@ let mockApartments = [
 		price: "2000",
 		bedrooms: 1,
 		bathrooms: 2.0,
-		pets: "small pets okay",
+		pets: "Small pets",
 		image:
 			"https://plus.unsplash.com/premium_photo-1661315431756-f9870d5ff5a0?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		user_id: 2,
@@ -54,7 +54,7 @@ let mockApartments = [
 		price: "3000",
 		bedrooms: 2,
 		bathrooms: 1.0,
-		pets: "small pets okay",
+		pets: "Small pets",
 		image:
 			"https://selenestudiesabroad.files.wordpress.com/2014/01/img_7327.jpg",
 		user_id: 2,
@@ -69,7 +69,7 @@ let mockApartments = [
 		price: "2000",
 		bedrooms: 1,
 		bathrooms: 2.0,
-		pets: "small pets okay",
+		pets: "Large pets ",
 		image:
 			"https://plus.unsplash.com/premium_photo-1661293864119-9c689ca0a1de?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		user_id: 2,
@@ -84,7 +84,7 @@ let mockApartments = [
 		price: "1800",
 		bedrooms: 1,
 		bathrooms: 2.0,
-		pets: "small pets okay",
+		pets: "Small pets",
 		image:
 			"https://images.unsplash.com/photo-1576378839886-48817ce9c383?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		user_id: 2,

@@ -15,7 +15,6 @@ import MyFlats from "./pages/MyFlats.js"
 const App = () => {
 	const [user, setUser] = useState(null)
 	const [apartments, setApartments] = useState(mockApartments)
-	console.log(user)
 	useEffect(() => {
 		const checkForLoggedInUser = localStorage.getItem("user")
 		if (checkForLoggedInUser) setUser(JSON.parse(checkForLoggedInUser))
